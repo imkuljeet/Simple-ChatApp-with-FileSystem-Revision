@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+</head>
+<body>
+    <form onsubmit="saveToLocalstorage(event)">
+        <label for="username"></label>
+        <input type="text" id="username" name="username" required>
+        <button type="submit">Login</button>
+    </form>    
+
+    <script>
+        function saveToLocalstorage(e){
+            e.preventDefault();
+
+            let name = e.target.username.value;
+
+            localStorage.setItem("username",name);
+        }
+    </script>
+</body>
+</html>
